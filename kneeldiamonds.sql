@@ -30,7 +30,7 @@ CREATE TABLE `Orders`
     `metals_id` INTEGER NOT NULL,
     `sizes_id` INTEGER NOT NULL,
     `styles_id` INTEGER NOT NULL,
-    FOREIGN KEY(`metal_id`) REFERENCES `Metals`(`id`),
+    FOREIGN KEY(`metals_id`) REFERENCES `Metals`(`id`),
     FOREIGN KEY(`sizes_id`) REFERENCES `Sizes` (`id`),
     FOREIGN KEY(`styles_id`) REFERENCES `styles` (`id`)
 );
@@ -49,9 +49,9 @@ INSERT INTO 'Sizes' VALUES (null, 8, 420, 1);
 
 
 
-INSERT INTO 'Styles' VALUES (null, "emo-goth", 313);
-INSERT INTO 'Styles' VALUES (null, "daddys girl", 999);
-INSERT INTO 'Styles' VALUES (null, "crunchy life", 113);
+INSERT INTO 'Styles' VALUES (null, "emo-goth", 313, 8);
+INSERT INTO 'Styles' VALUES (null, "daddys girl", 999, 5);
+INSERT INTO 'Styles' VALUES (null, "crunchy life", 113, 3);
 
 INSERT INTO 'Orders' VALUES (null, 1, 2, 3);
 INSERT INTO 'Orders' VALUES (null, 2, 5, 1);
@@ -62,4 +62,4 @@ INSERT INTO 'Orders' VALUES (null, 3, 8, 3);
 INSERT INTO 'Orders' VALUES (null, 2, 7, 3);
 INSERT INTO 'Orders' VALUES (null, 1, 6, 1);
 
-get_all_orders()
+
